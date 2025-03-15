@@ -1,0 +1,44 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build output
+dist/
+lib/
+build/
+.esbuild/
+.cache/
+.temp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Rollup cache
+.rollup.cache/
+
+# Logs & Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Editor-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Misc
+coverage/
