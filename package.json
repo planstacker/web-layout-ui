@@ -1,6 +1,7 @@
 {
-  "name": "web-layout-ui",
+  "name": "@planstacker/web-layout-ui",
   "version": "1.0.5",
+  "description": "The Main Web UI Layout Of PlanStacker.com",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -50,5 +51,8 @@
   },
   "dependencies": {
     "next": "^15.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
