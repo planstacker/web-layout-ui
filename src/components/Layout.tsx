@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 import { Box, Text, useColorMode } from "@chakra-ui/react";
 import Hero from "./Hero";
 import TopBar from "./TopBar";
@@ -6,7 +6,7 @@ import TopBar from "./TopBar";
 type Props = {
   title?: string;
   subTitle?: string;
-  children?: ReactNode;
+  children?: ReactElement|string;
   pageTitle?: string;
   pageMetaDescription?: string;
   withOutHero?: boolean;
@@ -35,7 +35,7 @@ export default function Layout({
             </Text>
           )}
           <Box as="main" p={4} textAlign={"left"}>
-            {children}
+            {children ?? <Text>None</Text>}
           </Box>
         </Box>
       </Box>
