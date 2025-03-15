@@ -2,7 +2,6 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import inject from "@rollup/plugin-inject";
 
 export default {
   input: "src/index.ts",
@@ -11,6 +10,7 @@ export default {
       file: "dist/index.cjs.js",
       format: "cjs",
       sourcemap: true,
+      exports: "named",
     },
     {
       file: "dist/index.es.js",
@@ -18,15 +18,23 @@ export default {
       sourcemap: true,
     },
   ],
-  external: ["react", "react-dom", "@chakra-ui/react"], // Ensure React is external
+  external: [
+    "react",
+    "react-dom",
+    "@chakra-ui/react",
+    "next/head",
+    "next/image",  // ✅ Make sure Next.js modules are external
+    "next/link",
+    "next/router",
+    "fs", "stream", "zlib", "util"  // ✅ Ensure Node.js built-ins are external
+  ],
   plugins: [
-    peerDepsExternal(),
-    resolve(),
-    commonjs(),
-    typescript({ tsconfig: "./tsconfig.json" }),
-    inject({
-      process: "process",
-      Buffer: ["buffer", "Buffer"],
+    peerDepsExternal(),  // ✅ Ensures peer dependencies are not bundled
+    resolve({
+      browser: true,  // ✅ Ensures we are bundling for the browser
+      preferBuiltins: false,  // ✅ Avoids Node.js modules in the bundle
     }),
+    commonjs(),
+    typescript({ tsconfig: "./tsconfig.json" })
   ],
 };
