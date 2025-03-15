@@ -19,7 +19,7 @@ export default function TopBar({link, logoSrc} : props) {
   return <Box textAlign={"right"} p={2} borderRadius="lg" bgColor={colorMode === 'dark' ? '#333' : "#bbb"}>
       <Flex>
         <Box pt={1.5} ml={1} mr={2}>
-          <Logo width={30}logoSrc={logoSrc}/>
+          <Logo width={30} height={30} logoSrc={logoSrc}/>
         </Box>
         <Link href={`${link}/`} passHref>
           <Flex

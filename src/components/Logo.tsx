@@ -13,7 +13,6 @@ export default function Logo({width, height, link, logoSrc} : props){
             <Image src={logoSrc ?? "/images/PlanStackerLogo2.png"} 
             width={width ?? 100} 
             height={height ?? 100} 
-            alt="Logo Of PlanStacker.com" priority 
-            style={{width:"auto",height:"auto"}}/>
+            alt="Logo Of PlanStacker.com" priority />
         </Link>
 }
