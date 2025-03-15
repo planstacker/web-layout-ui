@@ -1,5 +1,5 @@
 {
-  "name": "@planstacker/web-layout-ui",
+  "name": "planstacker-web-ui",
   "version": "1.0.5",
   "description": "The Main Web UI Layout Of PlanStacker.com",
   "license": "MIT",
