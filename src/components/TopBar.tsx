@@ -1,6 +1,6 @@
 import { Box, Flex, Text, useColorMode } from '@chakra-ui/react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from 'next/link.js';
+import { useRouter } from 'next/router.js';
 import { FaBlog, FaHome } from "react-icons/fa";
 import DarkModeSwitch  from './DarkModeSwitch';
 import Logo from './Logo';
