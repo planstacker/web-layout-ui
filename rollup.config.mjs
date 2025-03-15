@@ -22,10 +22,8 @@ export default {
     "react",
     "react-dom",
     "@chakra-ui/react",
-    "next/head",
-    "next/image",  // ✅ Make sure Next.js modules are external
-    "next/link",
-    "next/router",
+    "next",
+    /^next\//, 
     "fs", "stream", "zlib", "util"  // ✅ Ensure Node.js built-ins are external
   ],
   plugins: [
