@@ -1,5 +1,5 @@
-import { Box, Text, Flex, useColorModeValue } from "@chakra-ui/react";
-import Link from 'next/link.js';
+import { Box, Text, Link, Flex, useColorModeValue } from "@chakra-ui/react";
+
 const Footer = () => {
   const textColor = useColorModeValue("teal.600", "teal.300");
   const boxTextColor = useColorModeValue("gray.600", "gray.300");

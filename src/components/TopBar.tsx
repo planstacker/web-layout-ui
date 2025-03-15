@@ -8,16 +8,18 @@ import Logo from './Logo';
 type props = {
 
     link? : string, 
+
+    logoSrc? : string, 
 }
 
-export default function TopBar({link} : props) {
+export default function TopBar({link, logoSrc} : props) {
   const { colorMode } = useColorMode();
   const router = useRouter(); // Get the current route
 
   return <Box textAlign={"right"} p={2} borderRadius="lg" bgColor={colorMode === 'dark' ? '#333' : "#bbb"}>
       <Flex>
         <Box pt={1.5} ml={1} mr={2}>
-          <Logo width={30} />
+          <Logo width={30}logoSrc={logoSrc}/>
         </Box>
         <Link href={`${link}/`} passHref>
           <Flex

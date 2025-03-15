@@ -27,7 +27,7 @@ export default function Layout({
 
   return <Box as="main" minHeight="100vh" mx={1} bg={colorMode === "dark" ? "gray.800" : "gray.50"} py={10}>
         <Box maxW={{ base: "xl", lg: "4xl" }} mx="auto" textAlign="center">
-          <TopBar link={link} />
+          <TopBar link={link} logoSrc={logoSrc} />
           {!withOutHero && <Hero title={title ?? "Plan Stacker"} withLogo height="20vh" logoSrc={logoSrc} />}
           {subTitle && (
             <Text fontSize={{ lg: "4xl", base: "2xl" }} fontWeight="bold" mx="auto" maxW="4xl">
