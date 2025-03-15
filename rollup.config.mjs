@@ -2,13 +2,13 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import nodePolyfills from 'rollup-plugin-node-polyfills';
+import inject from "@rollup/plugin-inject";
 
 export default {
   input: "src/index.ts",
   output: [
     {
-      file: "dist/index.js",
+      file: "dist/index.cjs.js",
       format: "cjs",
       sourcemap: true,
     },
@@ -24,6 +24,9 @@ export default {
     resolve(),
     commonjs(),
     typescript({ tsconfig: "./tsconfig.json" }),
-    nodePolyfills(),
+    inject({
+      process: "process",
+      Buffer: ["buffer", "Buffer"],
+    }),
   ],
 };
