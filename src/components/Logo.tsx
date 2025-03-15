@@ -1,5 +1,5 @@
-import Image from 'next/image.js';
-import { Link } from '@chakra-ui/react';
+//import Image from 'next/image.js';
+import { Link, Image } from '@chakra-ui/react';
 type props = {
     width? : number,
     height?: number,
