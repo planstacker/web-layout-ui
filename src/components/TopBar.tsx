@@ -14,8 +14,7 @@ export default function TopBar({link} : props) {
   const { colorMode } = useColorMode();
   const router = useRouter(); // Get the current route
 
-  return (
-    <Box textAlign={"right"} p={2} borderRadius="lg" bgColor={colorMode === 'dark' ? '#333' : "#bbb"}>
+  return <Box textAlign={"right"} p={2} borderRadius="lg" bgColor={colorMode === 'dark' ? '#333' : "#bbb"}>
       <Flex>
         <Box pt={1.5} ml={1} mr={2}>
           <Logo width={30} />
@@ -60,5 +59,4 @@ export default function TopBar({link} : props) {
         <DarkModeSwitch marginLeft="auto" marginRight="0" />
       </Flex>
     </Box>
-  );
 }

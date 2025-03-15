@@ -15,8 +15,8 @@ const Hero = ({
   gradient?: string;
   fontColor?: string;
   logoSrc? : string;
-}) => (
-  <Flex
+}) => {
+  return <Flex
     justifyContent="center"
     alignItems="center"
     height={height}
@@ -32,7 +32,7 @@ const Hero = ({
       {title}
     </Heading>
   </Flex>
-);
+};
 
 
 export default Hero;

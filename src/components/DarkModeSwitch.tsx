@@ -15,8 +15,7 @@ type props = {
 const DarkModeSwitch = ({marginLeft, marginRight, marginTop, size} :props) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
-  return (
-    <IconButton
+  return <IconButton
       position="relative"
       marginLeft={marginLeft ?? "2"}
       marginRight={marginRight ?? "2"}
@@ -26,8 +25,7 @@ const DarkModeSwitch = ({marginLeft, marginRight, marginTop, size} :props) => {
       colorScheme="green"
       size={size}
       onClick={toggleColorMode}
-    />
-  );
+    />;
 };
 
 export default DarkModeSwitch;

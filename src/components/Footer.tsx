@@ -4,8 +4,7 @@ const Footer = () => {
   const textColor = useColorModeValue("teal.600", "teal.300");
   const boxTextColor = useColorModeValue("gray.600", "gray.300");
 
-  return (
-    <Flex as="footer" py="8rem">
+  return <Flex as="footer" py="8rem">
       <Box textAlign="center" color={boxTextColor} fontSize="sm" width="100%">
         <Text mb="2">
           &copy; {new Date().getFullYear()} <Link href="https://planstacker.com/">PlanStacker.com</Link>. All rights reserved.
@@ -23,7 +22,6 @@ const Footer = () => {
         </Flex>
       </Box>
     </Flex>
-  );
 };
 
 export default Footer;

@@ -30,8 +30,7 @@ export default function Layout({
 }: Props) {
   const { colorMode } = useColorMode();
 
-  return (
-    <Fragment>
+  return <Fragment>
       <Header pageMetaDescription={pageMetaDescription} pageTitle={pageTitle} useDefault={useDefault}/>
       <Box as="main" minHeight="100vh" mx={1} bg={colorMode === "dark" ? "gray.800" : "gray.50"} py={10}>
         <Box maxW={{ base: "xl", lg: "4xl" }} mx="auto" textAlign="center">
@@ -49,5 +48,4 @@ export default function Layout({
       </Box>
       <Footer />
     </Fragment>
-  );
 }
