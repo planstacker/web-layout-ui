@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import { Box, Text, useColorMode } from "@chakra-ui/react";
 import Hero from "./Hero";
 import Footer from "./Footer";
@@ -8,7 +8,7 @@ import Header from "./Header";
 type Props = {
   title?: string;
   subTitle?: string;
-  children: ReactNode;
+  children?: ReactNode;
   pageTitle?: string;
   pageMetaDescription?: string;
   withOutHero?: boolean;
