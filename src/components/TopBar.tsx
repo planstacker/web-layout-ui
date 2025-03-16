@@ -16,12 +16,14 @@ export default function TopBar({link, logoSrc} : props) {
   const { colorMode } = useColorMode();
   const router = useRouter(); // Get the current route
 
+  const aLink = link ?? "https://planstacker.com";
+
   return <Box textAlign={"right"} p={2} borderRadius="lg" bgColor={colorMode === 'dark' ? '#333' : "#bbb"}>
       <Flex>
         <Box pt={1.5} ml={1} mr={2}>
           <Logo width={30} height={30} logoSrc={logoSrc}/>
         </Box>
-        <Link href={`${link}/`} passHref>
+        <Link href={`${aLink}/`} passHref>
           <Flex
             mx={2}
             p={2}
@@ -39,7 +41,7 @@ export default function TopBar({link, logoSrc} : props) {
             <Text ml={2} fontSize="sm">Home</Text>
           </Flex>
         </Link>
-        <Link href={`${link}/blog`} passHref>
+        <Link href={`${aLink}/blog`} passHref>
           <Flex
             mx={2}
             p={2}
